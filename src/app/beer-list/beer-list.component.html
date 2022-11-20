@@ -1,0 +1,17 @@
+<p>Beers</p>
+<table [hidden]="hidetable">
+    <th>Beer name</th>
+    <th>Beer size</th>
+    <th>Select a beer</th>
+    <tr *ngFor="let b of inputBeer">
+        <td>{{b.name}}</td>
+        <td>{{b.size}}</td>
+        <td>
+            <button (click)="PassData(b)">
+                Select
+            </button>
+        </td>
+    </tr>
+   
+</table>
+<button (click)="hideShowTable()">Hide table</button>
